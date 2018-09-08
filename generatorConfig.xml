@@ -15,19 +15,19 @@
         <plugin type="org.mybatis.generator.plugins.page.PaginationPlugin" />
         <!-- 自定义查询指定字段  -->
         <plugin type="org.mybatis.generator.plugins.field.FieldsPlugin" />
-        <!-- 开启支持内存分页   可生成 支持内存分布的方法及参数  
-        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
-        -->
-        <!-- generate entity时，生成hashcode和equals方法
-		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
-		 -->
+        <!-- 开启支持内存分页   可生成 支持内存分布的方法及参数 -->
+        <!--<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />-->
+
+        <!-- generate entity时，生成hashcode和equals方法-->
+		<!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />-->
+
 		<!-- 此处是将Example改名为Criteria 当然 想改成什么都行~    -->      
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">  
 	        <property name="searchString" value="Example$" />
 	        <!-- 替换后
 	        <property name="replaceString" value="Criteria" />  
 	         -->
-	        <property name="replaceString" value="Query" />
+	        <property name="replaceString" value="Example" />
         </plugin>  
 		<!-- 此处是将UserMapper.xml改名为UserDao.xml 当然 想改成什么都行~ -->        
         <plugin type="org.mybatis.generator.plugins.rename.RenameSqlMapperPlugin">  
@@ -51,7 +51,7 @@
 		
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/taotao" userId="root"
+			connectionURL="jdbc:mysql://localhost:3306/testdruid" userId="root"
 			password="123456">
 		</jdbcConnection>
 		<!-- <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
@@ -91,6 +91,10 @@
 		</javaClientGenerator>
 		
 	<!-- 指定数据库表 -->
-		<table schema="" tableName="tb_content"></table>
+		<!--<table schema="" tableName="user"></table>-->
+		<table schema="" tableName="user">
+			<!--text类型的字段不生成单独的类-->
+			<columnOverride column="user_info" javaType="java.lang.String" jdbcType="VARCHAR" />
+		</table>
 	</context>
 </generatorConfiguration>
