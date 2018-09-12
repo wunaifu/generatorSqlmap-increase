@@ -12,7 +12,7 @@
 		<!-- genenat entity时,生成toString -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
         <!-- 自定义物理分页  可生成支持Mysql数据的limit  不支持Oracle -->
-        <plugin type="org.mybatis.generator.plugins.page.PaginationPlugin" />
+        <!--<plugin type="org.mybatis.generator.plugins.page.PaginationPlugin" />-->
         <!-- 自定义查询指定字段  -->
         <plugin type="org.mybatis.generator.plugins.field.FieldsPlugin" />
         <!-- 开启支持内存分页   可生成 支持内存分布的方法及参数 -->
