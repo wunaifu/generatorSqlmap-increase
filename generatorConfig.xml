@@ -50,10 +50,15 @@
 		</commentGenerator>
 		
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/testdruid" userId="root"
-			password="123456">
-		</jdbcConnection>
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+			<!--connectionURL="jdbc:mysql://localhost:3306/ssm-druid"-->
+						<!--userId="root"-->
+			<!--password="123456">-->
+		<!--</jdbcConnection>-->
+		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+						connectionURL="jdbc:sqlserver://localhost:1433;databaseName=sqltest"
+						userId="sa"
+						password="123456" />
 		<!-- <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
 			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:yycg" 
 			userId="yycg"
@@ -68,7 +73,7 @@
 
 
 		<!-- targetProject:生成PO类的位置 -->
-		<javaModelGenerator targetPackage="com.wnf.pojo"
+		<javaModelGenerator targetPackage="com.wnf.entity"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
@@ -91,10 +96,10 @@
 		</javaClientGenerator>
 		
 	<!-- 指定数据库表 -->
-		<!--<table schema="" tableName="user"></table>-->
-		<table schema="" tableName="user">
-			<!--text类型的字段不生成单独的类-->
-			<columnOverride column="user_info" javaType="java.lang.String" jdbcType="VARCHAR" />
-		</table>
+		<table schema="" tableName="sqlserveruser"></table>
+		<!--<table schema="" tableName="user">-->
+			<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+			<!--<columnOverride column="TestUser" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
 	</context>
 </generatorConfiguration>
