@@ -117,8 +117,17 @@
 		<!--普罗官网-->
 		<!--<table schema="" tableName="product_and_server">-->
 			<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
-			<!--<columnOverride column="detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
-			<!--<columnOverride column="big_text" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail1" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail2" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail3" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail4" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail5" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail6" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail7" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail8" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail9" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail10" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+			<!--<columnOverride column="detail11" javaType="java.lang.String" jdbcType="VARCHAR" />-->
 		<!--</table>-->
 		<!--<table schema="" tableName="business_case">-->
 			<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
@@ -135,9 +144,59 @@
 		<!--</table>-->
 		<!--<table schema="" tableName="question_help" ></table>-->
 		<!--<table schema="" tableName="ask_us" ></table>-->
-		<table schema="" tableName="user" ></table>
+		<!--<table schema="" tableName="user" ></table>-->
 		<!--<table schema="" tableName="contact_us" ></table>-->
 		<!--<table schema="" tableName="father_nav_bar" ></table>-->
 		<!--<table schema="" tableName="son_nav_bar" ></table>-->
+		<!--<table schema="" tableName="page_model_ps" ></table>-->
+
+		<!--<table schema="" tableName="apply_account" ></table>-->
+
+		<!--<table schema="" tableName="about_puluo_detail">-->
+		<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+		<!--<columnOverride column="ap_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
+		<!--<table schema="" tableName="hardware_detail">-->
+		<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+		<!--<columnOverride column="h_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
+		<!--<table schema="" tableName="software_detail">-->
+		<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+		<!--<columnOverride column="software_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
+		<!--<table schema="" tableName="puluo_find_detail">-->
+		<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+		<!--<columnOverride column="pf_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
+		<!--<table schema="" tableName="content_detail">-->
+		<!--&lt;!&ndash;text类型的字段不生成单独的类&ndash;&gt;-->
+		<!--<columnOverride column="content_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+		<!--</table>-->
+
+		<!--erp-->
+		<!--<table schema="" tableName="tb_alarm_set" ></table>-->
+		<!--<table schema="" tableName="tb_bom" ></table>-->
+		<!--<table schema="" tableName="tb_bom_flow" ></table>-->
+		<!--<table schema="" tableName="tb_bom_material" ></table>-->
+		<!--<table schema="" tableName="tb_io_plan" ></table>-->
+		<!--<table schema="" tableName="tb_mat_name" ></table>-->
+		<!--<table schema="" tableName="tb_mat_specification" ></table>-->
+		<!--<table schema="" tableName="tb_material" ></table>-->
+		<!--<table schema="" tableName="tb_material_buy" ></table>-->
+		<!--<table schema="" tableName="tb_material_buy_flow" ></table>-->
+		<!--<table schema="" tableName="tb_material_history" ></table>-->
+		<!--<table schema="" tableName="tb_material_price" ></table>-->
+		<!--<table schema="" tableName="tb_material_price_flow" ></table>-->
+		<!--<table schema="" tableName="tb_month_pay_plan" ></table>-->
+		<!--<table schema="" tableName="tb_msg" ></table>-->
+		<!--<table schema="" tableName="tb_msg_reader" ></table>-->
+		<!--<table schema="" tableName="tb_order_plan" ></table>-->
+		<!--<table schema="" tableName="tb_pro_history" ></table>-->
+		<!--<table schema="" tableName="tb_product" ></table>-->
+		<!--<table schema="" tableName="tb_rate" ></table>-->
+		<!--<table schema="" tableName="tb_role" ></table>-->
+		<!--<table schema="" tableName="tb_supplier" ></table>-->
+		<!--<table schema="" tableName="tb_user" ></table>-->
+
 	</context>
 </generatorConfiguration>
