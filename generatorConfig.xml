@@ -51,10 +51,15 @@
 		
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/puluo_web"
+			connectionURL="jdbc:mysql://47.107.170.54:3306/erp_db"
 						userId="root"
-			password="123456">
+			password="wnf123456">
 		</jdbcConnection>
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+			<!--connectionURL="jdbc:mysql://localhost:3306/puluo_web"-->
+						<!--userId="root"-->
+			<!--password="123456">-->
+		<!--</jdbcConnection>-->
 		<!--<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"-->
 						<!--connectionURL="jdbc:sqlserver://localhost:1433;databaseName=sqltest"-->
 						<!--userId="sa"-->
@@ -73,7 +78,7 @@
 
 
 		<!-- targetProject:生成PO类的位置 -->
-		<javaModelGenerator targetPackage="com.puluo.entity"
+		<javaModelGenerator targetPackage="com.tuniaokj.erpsystem.pmc.entity"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
@@ -82,14 +87,14 @@
 		</javaModelGenerator>
 
         <!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="com.puluo.mapper"
+		<sqlMapGenerator targetPackage="com.tuniaokj.erpsystem.pmc.mapper"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<!-- targetPackage：mapper接口生成的位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.puluo.dao"
+			targetPackage="com.tuniaokj.erpsystem.pmc.dao"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="true" />
@@ -197,6 +202,13 @@
 		<!--<table schema="" tableName="tb_role" ></table>-->
 		<!--<table schema="" tableName="tb_supplier" ></table>-->
 		<!--<table schema="" tableName="tb_user" ></table>-->
+
+		<table schema="" tableName="tb_product_order" ></table>
+		<table schema="" tableName="tb_make_product_plan" ></table>
+		<table schema="" tableName="tb_mpp_mat" ></table>
+		<table schema="" tableName="tb_purchase_plan" ></table>
+		<table schema="" tableName="tb_purchase_plan_mat" ></table>
+		<!--<table schema="" tableName="tb_product_history" ></table>-->
 
 	</context>
 </generatorConfiguration>
