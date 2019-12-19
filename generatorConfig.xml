@@ -48,13 +48,19 @@
 			<property name="suppressAllComments" value="true" />
 			-->
 		</commentGenerator>
-		
-		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://47.107.170.54:3306/erp_db"
-						userId="root"
-			password="wnf123456">
+		connectionURL="jdbc:mysql://localhost:3306/puluo_dev_db"
+		userId="root"
+		password="123456">
+			<!--mysql8版本可能需要加入该配置，不然数据库新增的字段可能无法生成到实体属性中，据说是mysql8驱动的问题-->
+			<!--<property name="nullCatalogMeansCurrent" value="true"></property>-->
 		</jdbcConnection>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+			<!--connectionURL="jdbc:mysql://47.107.170.54:3306/erp_db"-->
+						<!--userId="root"-->
+			<!--password="wnf123456">-->
+		<!--</jdbcConnection>-->
 		<!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
 			<!--connectionURL="jdbc:mysql://localhost:3306/puluo_web"-->
 						<!--userId="root"-->
@@ -78,7 +84,7 @@
 
 
 		<!-- targetProject:生成PO类的位置 -->
-		<javaModelGenerator targetPackage="com.tuniaokj.erpsystem.pmc.entity"
+		<javaModelGenerator targetPackage="com.puluo.shop.entity"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
@@ -87,14 +93,14 @@
 		</javaModelGenerator>
 
         <!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="com.tuniaokj.erpsystem.pmc.mapper"
+		<sqlMapGenerator targetPackage="com.puluo.shop.mapper"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<!-- targetPackage：mapper接口生成的位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.tuniaokj.erpsystem.pmc.dao"
+			targetPackage="com.puluo.shop.dao"
 			targetProject=".\src">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="true" />
@@ -203,12 +209,23 @@
 		<!--<table schema="" tableName="tb_supplier" ></table>-->
 		<!--<table schema="" tableName="tb_user" ></table>-->
 
-		<table schema="" tableName="tb_product_order" ></table>
-		<table schema="" tableName="tb_make_product_plan" ></table>
-		<table schema="" tableName="tb_mpp_mat" ></table>
-		<table schema="" tableName="tb_purchase_plan" ></table>
-		<table schema="" tableName="tb_purchase_plan_mat" ></table>
+		<!--<table schema="" tableName="tb_product_order" ></table>-->
+		<!--<table schema="" tableName="tb_make_product_plan" ></table>-->
+		<!--<table schema="" tableName="tb_mpp_mat" ></table>-->
+		<!--<table schema="" tableName="tb_purchase_plan" ></table>-->
+		<!--<table schema="" tableName="tb_purchase_plan_mat" ></table>-->
 		<!--<table schema="" tableName="tb_product_history" ></table>-->
+		<!--<table schema="" tableName="tb_shop" ></table>-->
 
+		<!--<table schema="" tableName="tb_workorder" ></table>-->
+		<!--<table schema="" tableName="tb_measure" ></table>-->
+		<table schema="" tableName="tb_shop_product" >
+			<columnOverride column="product_detail" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="sale_link" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="sale_link_two" javaType="java.lang.String" jdbcType="VARCHAR" />
+		</table>
+		<table schema="" tableName="tb_product_specification" ></table>
+		<table schema="" tableName="tb_basic_attribute" ></table>
+		<table schema="" tableName="tb_product_attribute" ></table>
 	</context>
 </generatorConfiguration>
